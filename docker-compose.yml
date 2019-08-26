@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   mysql:
-    container_name: sbdh_mysql
+    container_name: app_mysql
     image: mysql:5.7
     volumes:
       - ./db_data:/docker-entrypoint-initdb.d
@@ -15,7 +15,7 @@ services:
     ports:
       - 3306:3306
   phpmyadmin:
-    container_name: sbdh_phpmyadmin
+    container_name: app_phpmyadmin
     image: phpmyadmin/phpmyadmin
     ports:
       - $PMA_CLIENT_PORT:80
